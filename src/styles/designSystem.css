@@ -1,0 +1,305 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
+:root {
+  --h1: 40px;
+  --h2: 32px;
+  --h3: 28px;
+  --h4: 24px;
+  --h5: 20px;
+  --h6: 16px;
+
+  --sub: 20px;
+
+  --label: 16px;
+
+  --ls: 5px;
+
+  --body: 14px;
+
+  --font-1: "Libre Baskerville", serif;
+
+  --font-2: "Poppins", sans-serif;
+
+  --color-dark-blue-100: #0b2447;
+  --color-dark-blue-75: #0b244775;
+  --color-dark-blue-50: #0b244750;
+  --color-dark-blue-25: #0b244725;
+
+  --color-blue-100: #19376d;
+  --color-blue-75: #19376d75;
+  --color-blue-50: #19376d50;
+  --color-blue-25: #19376d25;
+
+  --color-light-blue-100: #a5d7e8;
+  --color-light-blue-75: #a5d7e875;
+  --color-light-blue-50: #a5d7e850;
+  --color-light-blue-25: #a5d7e825;
+
+  --color-white-100: #ffffff;
+  --color-white-75: #ffffff75;
+  --color-white-50: #ffffff50;
+  --color-white-25: #ffffff25;
+
+  --shadow-1: 3px 4px 12px 1px #00000025;
+}
+
+/**
+* ! removing default styles of the browser
+**/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/**
+* ! styles rules for common buttons
+**/
+
+.light-btn,
+.dark-btn,
+.red-btn,
+.purple-btn {
+  color: var(--color-dark-blue-100);
+  background-color: var(--color-white-100);
+  cursor: pointer;
+  font-size: var(--h5);
+  font-family: var(--font-2);
+  border: none;
+  border-radius: 12px;
+  padding: 10px 40px;
+}
+
+.dark-btn {
+  color: var(--color-white-100);
+  background-color: var(--color-dark-blue-100);
+}
+
+/**
+* ! styles rules for text colors
+**/
+
+.text-white {
+  color: var(--color-white-100);
+}
+
+.text-light {
+  color: var(--color-light-blue-100);
+}
+
+.text-blue {
+  color: var(--color-blue-100);
+}
+
+.text-dark {
+  color: var(--color-dark-blue-100);
+}
+
+/**
+* ! styles rules for label
+**/
+
+.label {
+  font-family: var(--font-2);
+  font-size: var(--label);
+  letter-spacing: var(--ls);
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+/**
+* ! styles rules for hero
+**/
+
+.hero {
+  background: var(--color-blue-100);
+}
+
+/**
+* ! styles rules for navbar
+**/
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px 0;
+}
+
+.navbar__logo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.navbar__logo--text {
+  font-size: var(--h2);
+  font-family: var(--font-2);
+  font-weight: 500;
+  color: var(--color-white-100);
+}
+
+.navbar__menu {
+  display: flex;
+  gap: 15px;
+  font-family: var(--font-2);
+  font-size: var(--h5);
+}
+
+.navbar__menu a {
+  color: var(--color-light-blue-100);
+  text-decoration: none;
+}
+
+.navbar__icons {
+  display: none;
+}
+
+.navbar__icons i {
+  font-size: var(--h2);
+  color: var(--color-light-blue-100);
+  cursor: pointer;
+}
+
+/**
+* ! styles rules for common classes
+**/
+.text-center {
+  text-align: center;
+}
+.container {
+  max-width: 80%;
+  margin: auto;
+}
+
+.responsive-image {
+  max-width: 100%;
+  height: auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  padding: 40px 0;
+  gap: 25px;
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.common-title {
+  text-transform: capitalize;
+  font-size: var(--h1);
+  font-weight: bold;
+  font-family: var(--font-1);
+}
+
+.circle {
+  border: 1rem solid var(--color-light-blue-100);
+  border-radius: 50%;
+}
+
+/**
+* ! styles rules for footer section
+**/
+
+.footerWrapper {
+  background-color: var(--color-blue-100);
+}
+
+.footerLinks {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 0;
+}
+
+.footerLinks__socials {
+  display: flex;
+  gap: 20px;
+}
+
+.footerLinks__socials a {
+  text-decoration: none;
+}
+
+.footerLinks__copyright {
+  font-size: var(--sub);
+  font-family: var(--font-2);
+  color: var(--color-white-100);
+}
+
+/**
+* ! media queries here
+**/
+
+@media (max-width: 1200px) {
+  .container {
+    max-width: 80%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .container {
+    max-width: 80%;
+  }
+  .common-title {
+    font-size: var(--h4);
+  }
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .container {
+    max-width: 80%;
+  }
+  .navbar__menu {
+    position: absolute;
+    z-index: 1;
+    top: 100px;
+    background-color: var(--color-blue-100);
+    width: 100%;
+    height: 100vh;
+    right: 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+  }
+  .navbar__menu--1 {
+    margin-top: -250px;
+  }
+
+  .navbar__icons {
+    display: block;
+  }
+
+  .hide {
+    display: none;
+  }
+
+  .hidden {
+    opacity: 0%;
+    z-index: -1;
+  }
+
+  .footerLinks {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 568px) {
+  .container {
+    max-width: 90%;
+  }
+}
